@@ -115,6 +115,16 @@ class Types
         });
     }
 
+    public static function mutation(): ObjectType
+    {
+        return new ObjectType([
+            'name' => 'Mutation',
+            'fields' => [
+                // Define mutation fields here
+            ]
+        ]);
+    }
+
     private static function getType(string $name, callable $typeFactory)
     {
         if (!isset(self::$types[$name])) {
@@ -123,4 +133,4 @@ class Types
 
         return self::$types[$name];
     }
-} 
+}
